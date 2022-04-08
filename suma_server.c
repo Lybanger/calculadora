@@ -7,9 +7,9 @@
 #include "suma.h"
 
 int *
-suma_1_svc(dupla_int *argp, struct svc_req *rqstp)
+suma_1_svc(dupla_int *argp, struct svc_req *rqstp) //funcion para hacer las operaciones correspondientes
 {
-	static int  result;
+	static int  result; //variable estatica para el resultado
 
 	/*
 	 * insert server code here
@@ -20,5 +20,5 @@ suma_1_svc(dupla_int *argp, struct svc_req *rqstp)
 	result = argp->a + argp->b;
 	printf("returning: %d\n", result);
 
-	return &result;
+	return &result;//variable de retorno para el resultado
 }
